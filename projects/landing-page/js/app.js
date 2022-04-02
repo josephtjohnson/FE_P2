@@ -46,7 +46,7 @@ function buildNavBar() {
     for (section of sections ) {
         const item = document.createElement('li');
         const link = document.createElement('a');
-        link.textContent=section.dataset.nav;
+        link.innerHTML=section.dataset.nav;
         item.appendChild(link);
         navbar.appendChild(item);
     }
