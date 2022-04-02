@@ -40,15 +40,15 @@
 
 // build the nav
 function buildNavBar() {
+    const navBarMenu = document.querySelector('.navbar__menu');
+    const navBarList = document.getElementById('navbar__list');
     const sections = Array.from(document.getElementsByTagName("section"));
-    const navbar = document.getElementById('navbar__list');
 
     for (section of sections ) {
         const item = document.createElement('li');
-        const link = document.createElement('a');
-        link.innerHTML=section.dataset.nav;
-        item.appendChild(link);
-        navbar.appendChild(item);
+        item.innerHTML += `<li><a class="menu__link">${section.dataset.nav}</a></li>`;
+        navBarList.appendChild(item);
+        navBarMenu.appendChild(navBarList);
     }
 }
 
