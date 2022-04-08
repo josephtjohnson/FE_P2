@@ -39,8 +39,12 @@ function activeViewPort(element) {
         rect.bottom <= window.innerHeight
     );
 }
-
-
+const scroll = (item, section) => {
+    item.addEventListener("click", function(e) {
+        e.preventDefault();
+        section.scrollIntoView({behavior: "smooth"});
+    })
+}
 
 /**
  * End Helper Functions
@@ -58,6 +62,7 @@ function buildNavBar() {
         item.innerHTML += `<a class="menu__link" data=${section.id} href=${section.id}>${section.dataset.nav}</a>`;
         navBarList.appendChild(item);
         navBarMenu.appendChild(navBarList);
+        scroll(item, section);
     }
 }
 buildNavBar();
