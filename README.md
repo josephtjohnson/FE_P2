@@ -6,17 +6,19 @@ Enhancing landing page functionality through JavaScript application
 
 To apply Udacity nanodegree skills for completion of the second project
 
-## Tech/framework used
+## Tech/Framework
 
-*JavaScript
+<ul>
+  <li>JavaScript</li>
+</ul>
 
 ## How to use
 
-<ul>
+<ol>
   <li>Clone or fork the repository</li>
   <li>Open 'index.html'</li>
   <li>Enjoy the fruit of my creative process</li>
-</ul>
+</ol>
 
 ## Credit
 
