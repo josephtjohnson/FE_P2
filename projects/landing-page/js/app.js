@@ -93,21 +93,28 @@ var lastScrollTop = 0;
 window.addEventListener("scroll", function(){
    var location = window.pageYOffset;
    if (location > lastScrollTop + 20){
-       document.getElementByClass("navbar__menu").style.display = "none";
+       document.getElementsByClassName("page__header")[0].style.display = "none";
    } else {
-      document.getElementByClass("navbar__menu").style.display = "initial";
+      document.getElementsByClassName("page__header")[0].style.display = "inline-block";
    }
    lastScrollTop = location;
 });
 
 //Scrolls to top when clicked
 const tb = document.getElementById("topButton");
-    tb.addEventListener("click", function(e) {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        })
+tb.addEventListener("click", function(e) {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
 });
+
+const sec = document.getElementsByTagName("h2");
+const ns = sec.nextSibling;
+sec.addEventListener("click", function(e) {
+    ns.style.display="none";
+})
+
 
 /**
  * End Main Functions
