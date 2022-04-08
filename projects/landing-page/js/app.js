@@ -90,7 +90,6 @@ document.addEventListener("scroll", function() {
 
 //Hides the navigation bar when scrolling
 var lastScrollTop = 0;
-
 window.addEventListener("scroll", function(){
    var location = window.pageYOffset;
    if (location > lastScrollTop + 20){

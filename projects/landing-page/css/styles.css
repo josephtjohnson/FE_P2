@@ -111,14 +111,21 @@ section {
     padding: 3em;
     color: #fff;
     justify-content: space-between;
-
 }
+
 #topButton {
     padding: 30px;
     color: black;
     background: white;
     font-size: 26px;
-    font-family: 'Merriweather', serif;
+    font-family: 'Fira Sans', sans-serif;
+    cursor: pointer;
+}
+
+#topButton:hover {
+    background: #333;
+    color: #fff;
+    transition: ease 0.3s all;
 }
 
 .page__footer p{
