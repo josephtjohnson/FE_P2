@@ -101,7 +101,14 @@ window.addEventListener("scroll", function(){
    lastScrollTop = location;
 });
 
-
+//Scrolls to top when clicked
+const tb = document.getElementById("topButton");
+    tb.addEventListener("click", function(e) {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+});
 
 /**
  * End Main Functions
