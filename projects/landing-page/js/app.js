@@ -30,6 +30,7 @@ const sections = Array.from(document.getElementsByTagName("section"));
  * Start Helper Functions
  *
 */
+//Function will determine if current element is within the viewport
 function activeViewPort(element) {
     const rect = element.getBoundingClientRect();
     return (
@@ -39,6 +40,8 @@ function activeViewPort(element) {
         rect.bottom <= window.innerHeight
     );
 }
+
+//Create smooth scrolling event listener
 const scroll = (item, section) => {
     item.addEventListener("click", function(e) {
         e.preventDefault();
@@ -62,6 +65,7 @@ function buildNavBar() {
         item.innerHTML += `<a class="menu__link" data=${section.id} href=${section.id}>${section.dataset.nav}</a>`;
         navBarList.appendChild(item);
         navBarMenu.appendChild(navBarList);
+        //Create scroll event listener for each section
         scroll(item, section);
     }
 }
@@ -85,20 +89,8 @@ document.addEventListener("scroll", function() {
 }
 );
 
-
-
-
-// Scroll to anchor ID using scrollTO event
-
-
 /**
  * End Main Functions
  * Begin Events
  *
 */
-
-// Build menu
-
-// Scroll to section on link click
-
-// Set sections as active
