@@ -106,9 +106,19 @@ section {
 
 /* Footer Styles */
 .page__footer {
+    display: flex;
     background: #000;
     padding: 3em;
     color: #fff;
+    justify-content: space-between;
+
+}
+#top {
+    padding: 30px;
+    color: black;
+    background: white;
+    font-size: 26px;
+    font-family: 'Merriweather', serif;
 }
 
 .page__footer p{
