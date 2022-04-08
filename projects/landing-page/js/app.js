@@ -33,8 +33,10 @@ const sections = Array.from(document.getElementsByTagName("section"));
 function activeViewPort(element) {
     const rect = element.getBoundingClientRect();
     return (
-        rect.top <= 150 &&
-        rect.bottom >= 150
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.right <= window.innerWidth &&
+        rect.bottom <= window.innerHeight
     );
 }
 
