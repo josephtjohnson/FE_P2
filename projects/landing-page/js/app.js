@@ -86,8 +86,22 @@ document.addEventListener("scroll", function() {
             document.querySelector(`[data=${section.id}]`).classList.remove('active-nav');
         }
     }
-}
-);
+});
+
+//Hides the navigation bar when scrolling
+var lastScrollTop = 0;
+
+window.addEventListener("scroll", function(){
+   var location = window.pageYOffset;
+   if (location > lastScrollTop + 20){
+       document.getElementByClass("navbar__menu").style.display = "none";
+   } else {
+      document.getElementByClass("navbar__menu").style.display = "initial";
+   }
+   lastScrollTop = location;
+});
+
+
 
 /**
  * End Main Functions
