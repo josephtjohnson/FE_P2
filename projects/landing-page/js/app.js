@@ -49,6 +49,23 @@ const scroll = (item, section) => {
     })
 }
 
+/*
+const collapse = (section) => {
+    const contents = section.getElementsByTagName("p");
+    const button = section.getElementsByTagName("button");
+    for (item in contents) {
+        section.addEventListener("click", function(e) {
+                if(!button[0].classList.contains('active')) {
+                    contents[item].style.display="hidden";
+                }
+                else {
+                    contents[item].style.display="initial";
+                }
+        })
+    }
+}
+*/
+
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -67,6 +84,7 @@ function buildNavBar() {
         navBarMenu.appendChild(navBarList);
         //Create scroll event listener for each section
         scroll(item, section);
+        /*collapse(section);*/
     }
 }
 buildNavBar();
@@ -108,13 +126,6 @@ tb.addEventListener("click", function(e) {
         behavior: "smooth"
     })
 });
-
-const sec = document.getElementsByTagName("h2");
-const ns = sec.nextSibling;
-sec.addEventListener("click", function(e) {
-    ns.style.display="none";
-})
-
 
 /**
  * End Main Functions

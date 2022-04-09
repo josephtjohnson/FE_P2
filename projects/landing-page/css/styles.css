@@ -38,6 +38,20 @@ h2 {
     font-family: 'Oxygen', Sans-Serif;
     font-size: 3em;
     color: #fff;
+    background-color: none;
+}
+
+button {
+    background-color: inherit;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    border-style: hidden;
+    cursor: pointer;
+}
+
+button.active {
+    opacity: 0.5;
 }
 
 p {
