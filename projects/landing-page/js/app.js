@@ -107,9 +107,9 @@ document.addEventListener("scroll", function() {
 });
 
 //Hides the navigation bar when scrolling
-var lastScrollTop = 0;
+const lastScrollTop = 0;
 window.addEventListener("scroll", function(){
-   var location = window.pageYOffset;
+   const location = window.pageYOffset;
    if (location > lastScrollTop + 20){
        document.getElementsByClassName("page__header")[0].style.display = "none";
    } else {
