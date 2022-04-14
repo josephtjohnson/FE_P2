@@ -1,13 +1,25 @@
-# Landing Page Project
+# Project
 
-## Table of Contents
+Enhancing landing page functionality through JavaScript application
 
-* [Instructions](#instructions)
+## Purpose
 
-## Instructions
+To apply Udacity nanodegree skills for completion of the second project
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+## Tech/Framework
 
-To get started, open `js/app.js` and start building out the app's functionality
+<ul>
+  <li>JavaScript</li>
+</ul>
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+## How to use
+
+<ol>
+  <li>Clone or fork the repository</li>
+  <li>Open 'index.html'</li>
+  <li>Enjoy the fruit of my creative process</li>
+</ol>
+
+## Credit
+
+Udacity - for the start code and lessons that made this possible.
