@@ -22,7 +22,7 @@
  * Define Global Variables
  *
  */
-const sections = Array.from(document.getElementsByTagName("section"));
+const sections = Array.from(document.getElementsByTagName('section'));
 
 
 /**
@@ -43,10 +43,10 @@ function activeViewPort(element) {
 
 //Create smooth scrolling event listener
 const scroll = (item, section) => {
-    item.addEventListener("click", function(e) {
+    item.addEventListener('click', function(e) {
         e.preventDefault();
         section.scrollIntoView({
-            behavior: "smooth"
+            behavior: 'smooth'
         });
     })
 }
@@ -81,7 +81,8 @@ function buildNavBar() {
 
     for (section of sections) {
         const item = document.createElement('li');
-        item.innerHTML += `<a class="menu__link" data=${section.id} href=${section.id}>${section.dataset.nav}</a>`;
+        item.innerHTML += `<a class="menu__link" data=${section.id}' +
+            ' href=${section.id}>${section.dataset.nav}</a>`;
         navBarList.appendChild(item);
         navBarMenu.appendChild(navBarList);
         //Create scroll event listener for each section
@@ -93,16 +94,16 @@ buildNavBar();
 
 
 // Add class 'active' to section
-document.addEventListener("scroll", function() {
+document.addEventListener('scroll', function() {
     e.preventDefault;
     for (let i = 0; i < sections.length; i++) {
         let section = sections[i];
 
         if (activeViewPort(section)) {
-            section.classList.add("active-class");
+            section.classList.add('active-class');
             document.querySelector(`[data=${section.id}]`).classList.add('active-nav');
         } else {
-            section.classList.remove("active-class");
+            section.classList.remove('active-class');
             document.querySelector(`[data=${section.id}]`).classList.remove('active-nav');
         }
     }
@@ -110,24 +111,24 @@ document.addEventListener("scroll", function() {
 
 //Hides the navigation bar when scrolling
 const lastScrollTop = 0;
-window.addEventListener("scroll", function() {
+window.addEventListener('scroll', function() {
     e.preventDefault;
     const location = window.pageYOffset;
     if (location > lastScrollTop + 20) {
-        document.getElementsByClassName("page__header")[0].style.display = "none";
+        document.getElementsByClassName("page__header")[0].style.display = 'none';
     } else {
-        document.getElementsByClassName("page__header")[0].style.display = "inline-block";
+        document.getElementsByClassName("page__header")[0].style.display = 'inline-block';
     }
     lastScrollTop = location;
 });
 
 //Scrolls to top when clicked
-const tb = document.getElementById("topButton");
-tb.addEventListener("click", function(e) {
+const tb = document.getElementById('topButton');
+tb.addEventListener('click', function(e) {
     e.preventDefault;
     window.scrollTo({
         top: 0,
-        behavior: "smooth"
+        behavior: 'smooth'
     })
 });
 
