@@ -41,19 +41,6 @@ h2 {
     background-color: none;
 }
 
-button {
-    background-color: inherit;
-    color: inherit;
-    font-size: inherit;
-    font-family: inherit;
-    border-style: hidden;
-    cursor: pointer;
-}
-
-button.active {
-    opacity: 0.5;
-}
-
 p {
     line-height: 1.6em;
     color: #eee;
