@@ -95,20 +95,24 @@ buildNavBar();
 
 // Add class 'active' to section
 document.addEventListener('scroll', function() {
-    e.preventDefault;
     for (let i = 0; i < sections.length; i++) {
         let section = sections[i];
+        console.log(section);
+        let sel = document.querySelector(`[data-nav=${section.id}]`);
+        console.log(sel);
+
 
         if (activeViewPort(section)) {
             section.classList.add('active-class');
-            document.querySelector(`[data=${section.id}]`).classList.add('active-nav');
+            sel.classList.add('active-nav');
         } else {
             section.classList.remove('active-class');
-            document.querySelector(`[data=${section.id}]`).classList.remove('active-nav');
+            sel.classList.remove('active-nav');
         }
     }
 });
 
+/*
 //Hides the navigation bar when scrolling
 const lastScrollTop = 0;
 window.addEventListener('scroll', function() {
@@ -121,6 +125,7 @@ window.addEventListener('scroll', function() {
     }
     lastScrollTop = location;
 });
+*/
 
 //Scrolls to top when clicked
 const tb = document.getElementById('topButton');
