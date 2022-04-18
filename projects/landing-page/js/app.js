@@ -48,7 +48,7 @@ const scroll = (item, section) => {
         section.scrollIntoView({
             behavior: 'smooth'
         });
-    })
+    });
 }
 
 /*
@@ -97,17 +97,14 @@ buildNavBar();
 document.addEventListener('scroll', function() {
     for (let i = 0; i < sections.length; i++) {
         let section = sections[i];
-        console.log(section);
-        let sel = document.querySelector(`[data-nav=${section.id}]`);
-        console.log(sel);
-
 
         if (activeViewPort(section)) {
             section.classList.add('active-class');
-            sel.classList.add('active-nav');
+            console.log(section.id);
+            document.querySelector(`[href=${section.id}]`).classList.add('active-nav');
         } else {
             section.classList.remove('active-class');
-            sel.classList.remove('active-nav');
+            document.querySelector(`[href=${section.id}]`).classList.remove('active-nav');
         }
     }
 });
