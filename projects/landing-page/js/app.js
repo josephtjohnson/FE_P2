@@ -94,13 +94,13 @@ buildNavBar();
 
 
 // Add class 'active' to section
-document.addEventListener('scroll', function() {
+document.addEventListener('scroll', function(e) {
+    e.preventDefault;
     for (let i = 0; i < sections.length; i++) {
         let section = sections[i];
 
         if (activeViewPort(section)) {
             section.classList.add('active-class');
-            console.log(section.id);
             document.querySelector(`[href=${section.id}]`).classList.add('active-nav');
         } else {
             section.classList.remove('active-class');
