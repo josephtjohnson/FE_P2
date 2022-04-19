@@ -51,23 +51,6 @@ const scroll = (item, section) => {
     });
 }
 
-/*
-const collapse = (section) => {
-    const contents = section.getElementsByTagName("p");
-    const button = section.getElementsByTagName("button");
-    for (item in contents) {
-        section.addEventListener("click", function(e) {
-                if(!button[0].classList.contains('active')) {
-                    contents[item].style.display="hidden";
-                }
-                else {
-                    contents[item].style.display="initial";
-                }
-        })
-    }
-}
-*/
-
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -87,7 +70,6 @@ function buildNavBar() {
         navBarMenu.appendChild(navBarList);
         //Create scroll event listener for each section
         scroll(item, section);
-        /*collapse(section);*/
     }
 }
 buildNavBar();
@@ -98,7 +80,6 @@ document.addEventListener('scroll', function(e) {
     e.preventDefault;
     for (let i = 0; i < sections.length; i++) {
         let section = sections[i];
-
         if (activeViewPort(section)) {
             section.classList.add('active-class');
             document.querySelector(`[href=${section.id}]`).classList.add('active-nav');
@@ -108,21 +89,6 @@ document.addEventListener('scroll', function(e) {
         }
     }
 });
-
-/*
-//Hides the navigation bar when scrolling
-const lastScrollTop = 0;
-window.addEventListener('scroll', function() {
-    e.preventDefault;
-    const location = window.pageYOffset;
-    if (location > lastScrollTop + 20) {
-        document.getElementsByClassName("page__header")[0].style.display = 'none';
-    } else {
-        document.getElementsByClassName("page__header")[0].style.display = 'inline-block';
-    }
-    lastScrollTop = location;
-});
-*/
 
 //Scrolls to top when clicked
 const tb = document.getElementById('topButton');
