@@ -22,4 +22,4 @@ Joseph Johnson
 
 ## Credit
 
-Udacity - for the start code and lessons that made this possible.
+Udacity - for the starter code and lessons that made this possible.
