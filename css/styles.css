@@ -22,14 +22,40 @@ body {
 /* Typeography General*/
 h1 {
     font-family: 'Fira Sans', sans-serif;
-    font-size: 3em;
+    font-size: 5em;
     margin: 2em 1rem;
+}
+
+@media only screen and (min-width: 15em) and (max-width: 25em){
+    h1 {
+        font-size: 4em;
+        margin: 2em 0em 1em;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (min-width: 25em) and (max-width: 35em){
+    h1 {
+        font-size: 5em;
+        margin: 2em 0em 0em;
+    }
+
+    p {
+        font-size: 1em;
+    }
 }
 
 @media only screen and (min-width: 35em){
     h1 {
-        font-size: 7em;
-        margin: 2em 4rem 1em;
+        font-size: 5em;
+        margin: 2em 0em 1em;
+    }
+
+    p {
+        font-size: 1em;
     }
 }
 
@@ -72,6 +98,13 @@ section {
     text-align: right;
     justify-content: right;
 }
+
+@media only screen and (max-width: 25em){
+    .navbar__menu li {
+        font-size: 0.85em;
+    }
+}
+
 
 .navbar__menu li {
     display: inline-block;
@@ -134,12 +167,18 @@ section {
     color: #fff;
 }
 
-
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */
 .landing__container {
     padding: 1em;
     text-align: left;
+}
+
+@media only screen and (min-width: 15em){
+    .landing__container {
+        max-width: 100em;
+        padding: 1em;
+    }
 }
 
 @media only screen and (min-width: 35em){
@@ -219,9 +258,11 @@ section:nth-of-type(3n + 1) .landing__container::after {
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
-section.active-class {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+@media only screen and (min-width: 15em) {
+    section.active-class {
+        background: rgb(0, 0, 0);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    }
 }
 
 section.active-class .landing__container::before {
